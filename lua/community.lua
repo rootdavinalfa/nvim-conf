@@ -9,7 +9,6 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.git.git-blame-nvim" },
-  { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.project.projectmgr-nvim" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
