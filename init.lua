@@ -17,19 +17,3 @@ end
 
 require "lazy_setup"
 require "polish"
-
-local lspconfig = require "lspconfig"
-lspconfig.volar.setup {
-  filetypes = { "vue" },
-  init_options = {
-    vue = {
-      hybridMode = false,
-    },
-  },
-}
-
-lspconfig.ts_ls.setup {
-  init_options = {
-    maxTsServerMemory = 8192,
-  },
-}
