@@ -27,3 +27,9 @@ lspconfig.volar.setup {
     },
   },
 }
+
+lspconfig.ts_ls.setup {
+  init_options = {
+    maxTsServerMemory = 8192,
+  },
+}
