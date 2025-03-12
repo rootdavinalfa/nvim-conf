@@ -14,5 +14,7 @@ return {
   { import = "astrocommunity.editing-support.undotree" },
   { import = "astrocommunity.editing-support.vim-doge" },
   { import = "astrocommunity.utility.hover-nvim" },
+  { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
+  { import = "astrocommunity.pack.typescript" },
   -- import/override with your plugins folder
 }
