@@ -16,5 +16,6 @@ return {
   { import = "astrocommunity.utility.hover-nvim" },
   { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.vue" },
   -- import/override with your plugins folder
 }
