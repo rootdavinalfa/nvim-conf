@@ -17,5 +17,6 @@ return {
   { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.docker" },
   -- import/override with your plugins folder
 }
