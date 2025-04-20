@@ -12,7 +12,6 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.editing-support.ultimate-autopair-nvim" },
   { import = "astrocommunity.editing-support.undotree" },
-  { import = "astrocommunity.editing-support.vim-doge" },
   { import = "astrocommunity.utility.hover-nvim" },
   { import = "astrocommunity.terminal-integration.toggleterm-manager-nvim" },
   { import = "astrocommunity.pack.typescript" },
