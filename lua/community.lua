@@ -17,5 +17,6 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.prisma" },
   -- import/override with your plugins folder
 }
