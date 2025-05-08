@@ -58,6 +58,7 @@ return {
             intelephense = {
               files = {
                 maxSize = 1000000 * 10,
+                maxMemory = 3096,
               },
             },
           },
