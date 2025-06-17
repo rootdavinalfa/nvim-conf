@@ -18,5 +18,6 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- import/override with your plugins folder
 }
