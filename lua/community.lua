@@ -20,5 +20,6 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.spring-boot" },
+  { import = "astrocommunity.pack.kotlin" },
   -- import/override with your plugins folder
 }
