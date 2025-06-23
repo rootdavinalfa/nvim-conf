@@ -22,5 +22,6 @@ return {
   { import = "astrocommunity.pack.spring-boot" },
   { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.laravel" },
+  { import = "astrocommunity.pack.java" },
   -- import/override with your plugins folder
 }
