@@ -19,9 +19,6 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.pack.spring-boot" },
-  { import = "astrocommunity.pack.kotlin" },
   { import = "astrocommunity.pack.laravel" },
-  { import = "astrocommunity.pack.java" },
   -- import/override with your plugins folder
 }
