@@ -20,5 +20,6 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.laravel" },
+  { import = "astrocommunity.pack.python" },
   -- import/override with your plugins folder
 }
