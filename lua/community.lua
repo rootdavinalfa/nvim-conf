@@ -21,5 +21,10 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.php" },
+  { import = "astrocommunity.scrolling.cinnamon-nvim" },
+  { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
   -- import/override with your plugins folder
 }
