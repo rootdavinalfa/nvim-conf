@@ -18,13 +18,12 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.prisma" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.laravel" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.scrolling.mini-animate" },
-  { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.completion.copilot-vim-cmp" },
   -- import/override with your plugins folder
 }
