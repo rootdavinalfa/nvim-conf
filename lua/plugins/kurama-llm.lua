@@ -1,7 +1,7 @@
 if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
   "Kurama622/llm.nvim",
-  dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim", "Exafunction/windsurf.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
   cmd = { "LLMSessionToggle", "LLMSelectedTextHandler", "LLMAppHandler" },
   config = function()
     local tools = require "llm.tools"
@@ -12,7 +12,7 @@ return {
         {
           name = "Ollama",
           url = "http://localhost:11434/v1/completions",
-          model = "codegemma:2b",
+          model = "qwen2.5-coder:7b",
           api_type = "ollama",
         },
 
@@ -60,19 +60,19 @@ return {
           handler = tools.completion_handler,
           opts = {
             -- Ollama
-            -- url = "http://localhost:11434/v1/completions",
-            -- model = "codegemma:2b",
-            -- api_type = "ollama",
+            url = "http://localhost:11434/v1/completions",
+            model = "qwen2.5-coder:7b",
+            api_type = "ollama",
 
             -- Gemini
-            url = "https://generativelanguage.googleapis.com/v1beta/openai/",
-            model = "gemini-2.5-pro",
-            api_type = "openai",
-            fetch_key = function() return vim.env.GEMINI_KEY end,
+            -- url = "https://generativelanguage.googleapis.com/v1beta/openai/",
+            -- model = "gemini-2.5-pro",
+            -- api_type = "openai",
+            -- fetch_key = function() return vim.env.GEMINI_KEY end,
 
             n_completions = 3,
-            context_window = 4096,
-            max_tokens = 512,
+            context_window = 1024,
+            max_tokens = 256,
 
             -- A mapping of filetype to true or false, to enable completion.
             --filetypes = { sh = false },
