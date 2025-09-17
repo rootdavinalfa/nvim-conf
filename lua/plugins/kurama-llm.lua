@@ -10,6 +10,12 @@ return {
 
       models = {
         {
+          name = "LM Studio",
+          url = "http://localhost:1234/v1/chat/completions",
+          model = "qwen/qwen3-4b-thinking-2507",
+          api_type = "openai",
+        },
+        {
           name = "Ollama",
           url = "http://localhost:11434/v1/completions",
           model = "qwen2.5-coder:7b",
@@ -59,10 +65,14 @@ return {
         Completion = {
           handler = tools.completion_handler,
           opts = {
+
+            url = "http://localhost:1234/v1/chat/completions",
+            model = "qwen/qwen3-4b-thinking-2507",
+            api_type = "openai",
             -- Ollama
-            url = "http://localhost:11434/v1/completions",
-            model = "qwen2.5-coder:7b",
-            api_type = "ollama",
+            -- url = "http://localhost:11434/v1/completions",
+            -- model = "qwen2.5-coder:7b",
+            -- api_type = "ollama",
 
             -- Gemini
             -- url = "https://generativelanguage.googleapis.com/v1beta/openai/",
