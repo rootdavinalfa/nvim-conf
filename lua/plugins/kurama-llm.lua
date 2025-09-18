@@ -12,7 +12,7 @@ return {
         {
           name = "LM Studio",
           url = "http://localhost:1234/v1/chat/completions",
-          model = "qwen/qwen3-4b-thinking-2507",
+          model = "qwen/qwen3-coder-30b",
           api_type = "openai",
         },
         {
@@ -66,8 +66,8 @@ return {
           handler = tools.completion_handler,
           opts = {
 
-            url = "http://localhost:1234/v1/chat/completions",
-            model = "qwen/qwen3-4b-thinking-2507",
+            url = "http://localhost:1234/v1/completions",
+            model = "qwen/qwen3-coder-30b",
             api_type = "openai",
             -- Ollama
             -- url = "http://localhost:11434/v1/completions",
