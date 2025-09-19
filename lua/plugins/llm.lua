@@ -1,4 +1,6 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+local config = require "config/enable"
+
+if not config.LLM then return {} end
 return {
   "saghen/blink.cmp",
   dependencies = { "Kurama622/llm.nvim" },

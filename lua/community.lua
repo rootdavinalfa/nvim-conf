@@ -24,7 +24,7 @@ return {
   { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.scrolling.mini-animate" },
-  -- { import = "astrocommunity.ai.kurama622-llm-nvim" },
+  { import = "astrocommunity.ai.kurama622-llm-nvim" },
   -- { import = "astrocommunity.completion.copilot-vim-cmp" },
   -- import/override with your plugins folder
 }

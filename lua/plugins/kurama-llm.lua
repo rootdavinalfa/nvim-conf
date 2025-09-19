@@ -1,4 +1,7 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+local config = require "config/enable"
+
+if not config.LLM then return {} end
+
 return {
   "Kurama622/llm.nvim",
   dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
@@ -12,7 +15,7 @@ return {
         {
           name = "LM Studio",
           url = "http://localhost:1234/v1/chat/completions",
-          model = "qwen/qwen3-coder-30b",
+          model = "qwen/qwen3-4b-2507",
           api_type = "openai",
         },
         {
@@ -67,7 +70,7 @@ return {
           opts = {
 
             url = "http://localhost:1234/v1/completions",
-            model = "qwen/qwen3-coder-30b",
+            model = "qwen/qwen3-4b-2507",
             api_type = "openai",
             -- Ollama
             -- url = "http://localhost:11434/v1/completions",
@@ -81,7 +84,7 @@ return {
             -- fetch_key = function() return vim.env.GEMINI_KEY end,
 
             n_completions = 3,
-            context_window = 1024,
+            context_window = 512,
             max_tokens = 256,
 
             -- A mapping of filetype to true or false, to enable completion.
