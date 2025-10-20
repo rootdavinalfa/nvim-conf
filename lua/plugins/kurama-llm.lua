@@ -13,6 +13,13 @@ return {
 
       models = {
         {
+          name = "Gemini 2.5 Flash",
+          url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+          model = "gemini-2.5-flash",
+          api_type = "openai",
+          fetch_key = function() return vim.env.GEMINI_KEY end,
+        },
+        {
           name = "LM Studio",
           url = "http://localhost:1234/v1/chat/completions",
           model = "qwen/qwen3-4b-2507",
@@ -23,14 +30,6 @@ return {
           url = "http://localhost:11434/v1/completions",
           model = "qwen2.5-coder:7b",
           api_type = "ollama",
-        },
-
-        {
-          name = "Gemini 2.5 Flash",
-          url = "https://generativelanguage.googleapis.com/v1beta/openai/",
-          model = "gemini-2.5-flash",
-          api_type = "openai",
-          fetch_key = function() return vim.env.GEMINI_KEY end,
         },
       },
 
@@ -72,13 +71,15 @@ return {
             url = "http://localhost:1234/v1/completions",
             model = "qwen/qwen3-4b-2507",
             api_type = "openai",
+            fetch_key = function() return "TERM" end,
+
             -- Ollama
             -- url = "http://localhost:11434/v1/completions",
             -- model = "qwen2.5-coder:7b",
             -- api_type = "ollama",
 
             -- Gemini
-            -- url = "https://generativelanguage.googleapis.com/v1beta/openai/",
+            -- url = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
             -- model = "gemini-2.5-pro",
             -- api_type = "openai",
             -- fetch_key = function() return vim.env.GEMINI_KEY end,
@@ -135,7 +136,4 @@ return {
       },
     }
   end,
-  keys = {
-    { "<leader>aic", mode = "n", "<cmd>LLMSessionToggle<cr>", desc = "Toggle AI Chat Session" },
-  },
 }
