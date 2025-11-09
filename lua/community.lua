@@ -26,6 +26,8 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.ai.kurama622-llm-nvim" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.java" }, -- add Java language support
+  { import = "astrocommunity.lsp.nvim-java" }, -- opt-in to nvim-java for LSP
   -- { import = "astrocommunity.completion.copilot-vim-cmp" },
   -- import/override with your plugins folder
 }
