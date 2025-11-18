@@ -18,16 +18,16 @@ return {
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.prisma" },
-  { import = "astrocommunity.pack.laravel" },
+  -- { import = "astrocommunity.pack.laravel" },
+  -- { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.pack.php" },
   { import = "astrocommunity.scrolling.cinnamon-nvim" },
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.ai.kurama622-llm-nvim" },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.java" }, -- add Java language support
-  { import = "astrocommunity.lsp.nvim-java" }, -- opt-in to nvim-java for LSP
+  -- { import = "astrocommunity.pack.java" }, -- add Java language support
+  -- { import = "astrocommunity.lsp.nvim-java" }, -- opt-in to nvim-java for LSP
   -- { import = "astrocommunity.completion.copilot-vim-cmp" },
   -- import/override with your plugins folder
 }

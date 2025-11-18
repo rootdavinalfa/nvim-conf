@@ -17,3 +17,11 @@ end
 
 require "lazy_setup"
 require "polish"
+
+require "script/convert"
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>as",
+  '<cmd>lua require("script/convert").switch_case()<CR>',
+  { noremap = true, silent = true, desc = "Switch case camelCase / snack_case" }
+)
