@@ -32,9 +32,9 @@ return {
     },
     cmd = { "Laravel" },
     keys = {
-      { "<leader>lra", ":Laravel artisan<cr>" },
-      { "<leader>lrr", ":Laravel routes<cr>" },
-      { "<leader>lrm", ":Laravel related<cr>" },
+      { "<leader>lra", function() Laravel.pickers.laravel() end, desc = "Laravel: Open Laravel Picker" },
+      { "<leader>lrr", function() Laravel.pickers.routes() end, desc = "Laravel: Open Routes Picker" },
+      { "<leader>lrm", function() Laravel.pickers.make() end, desc = "Laravel: Open Make Picker" },
     },
     event = { "VeryLazy" },
     opts = {},

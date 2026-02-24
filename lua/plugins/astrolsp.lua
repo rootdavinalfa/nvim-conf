@@ -58,8 +58,8 @@ return {
           settings = {
             intelephense = {
               files = {
-                maxSize = 1000000 * 10,
-                maxMemory = 3096,
+                maxSize = 1000000 * 50,
+                maxMemory = 4098,
               },
             },
           },
