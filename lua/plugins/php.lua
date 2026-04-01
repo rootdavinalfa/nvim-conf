@@ -9,7 +9,7 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     optional = true,
     opts = function(_, opts)
       opts.ensure_installed =
@@ -50,7 +50,7 @@ return {
     },
   },
   {
-    "Saghen/blink.cmp",
+    "saghen/blink.cmp",
     optional = true,
     opts = {},
     dependencies = {
