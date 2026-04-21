@@ -1,43 +1,96 @@
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 return {
+  { import = "astrocommunity.pack.html-css" },
   {
-    "AstroNvim/astrolsp",
-    ---@param opts AstroLSPOpts
-    opts = function(_, opts)
-      opts.servers = opts.servers or {}
-      table.insert(opts.servers, "laravel_lsp")
+    "adalessa/laravel.nvim",
+    cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
+    dependencies = {
+      "tpope/vim-dotenv",
+      "MunifTanjim/nui.nvim",
+      "kevinhwang91/promise-async",
+      {
+        "AstroNvim/astrocore",
+        ---@param opts AstroCoreOpts
+        opts = function(_, opts)
+          local maps = assert(opts.mappings)
+          local prefix = "<Leader>L"
+          maps.n[prefix] = { desc = require("astroui").get_icon("Laravel", 1, true) .. "Laravel" }
 
-      -- extend our configuration table to have our new prolog server
-      opts.config = require("astrocore").extend_tbl(opts.config or {}, {
-        -- this must be a function to get access to the `lspconfig` module
-        laravel_lsp = {
-          -- the command for starting the server
-          cmd = {
-            "laravel-ls",
-          },
-          -- the filetypes to attach the server to
-          filetypes = { "php", "blade" },
-          -- root directory detection for detecting the project root
-          root_dir = require("lspconfig.util").root_pattern "composer.json",
+          maps.n[prefix .. "a"] = { ":Laravel artisan<CR>", desc = "Artisan" }
+          maps.n[prefix .. "r"] = { ":Laravel routes<CR>", desc = "Routes" }
+          maps.n[prefix .. "c"] = { ":Composer<CR>", desc = "Composer" }
+          maps.n[prefix .. "n"] = { ":Npm<CR>", desc = "Npm" }
+          maps.n[prefix .. "y"] = { ":Yarn<CR>", desc = "Yarn" }
+        end,
+      },
+      { "AstroNvim/astroui", opts = { icons = { Laravel = "󰫐" } } },
+    },
+    event = { "VeryLazy" },
+    opts = function(_, opts)
+      local is_available = require("astrocore").is_available
+      opts.features = {
+        pickers = {
+          enable = true,
+          provider = (is_available "telescope.nvim" and "telescope")
+            or (is_available "fzf-lua" and "fzf-lua")
+            or (is_available "snacks.nvim" and "snacks")
+            or "ui.select",
         },
-      })
+      }
     end,
   },
   {
-    "adalessa/laravel.nvim",
+    "Bleksak/laravel-ide-helper.nvim",
     dependencies = {
-      "tpope/vim-dotenv",
-      "nvim-telescope/telescope.nvim",
-      "MunifTanjim/nui.nvim",
-      "kevinhwang91/promise-async",
+      {
+        "AstroNvim/astrocore",
+        ---@param opts AstroCoreOpts
+        opts = function(_, opts)
+          local maps = assert(opts.mappings)
+          local prefix = "<Leader>Li"
+          maps.n[prefix] = { desc = require("astroui").get_icon("IdeHelper", 1, true) .. "Laravel Ide Helper" }
+
+          maps.n[prefix .. "m"] = {
+            function() require("laravel-ide-helper").generate_models(vim.fn.expand "%") end,
+            desc = "Generate Model Info for current model",
+          }
+          maps.n[prefix .. "M"] = {
+            function() require("laravel-ide-helper").generate_models() end,
+            desc = "Generate Model Info for all models",
+          }
+        end,
+      },
+      { "AstroNvim/astroui", opts = { icons = { IdeHelper = "󱚌" } } },
     },
-    cmd = { "Laravel" },
-    keys = {
-      { "<leader>lra", function() Laravel.pickers.laravel() end, desc = "Laravel: Open Laravel Picker" },
-      { "<leader>lrr", function() Laravel.pickers.routes() end, desc = "Laravel: Open Routes Picker" },
-      { "<leader>lrm", function() Laravel.pickers.make() end, desc = "Laravel: Open Make Picker" },
+  },
+  {
+    "ricardoramirezr/blade-nav.nvim",
+    dependencies = {
+      { "hrsh7th/nvim-cmp", optional = true },
     },
-    event = { "VeryLazy" },
-    opts = {},
-    config = true,
+    ft = { "blade", "php" },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "pint" })
+    end,
+  },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    optional = true,
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "pint" })
+    end,
+  },
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        php = { "pint" },
+      },
+    },
   },
 }

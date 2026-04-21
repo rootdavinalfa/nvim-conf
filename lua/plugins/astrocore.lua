@@ -57,6 +57,9 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
+        ["<leader>gws"] = { function() Snacks.picker.worktrees() end, desc = "Switch worktree" },
+        ["<leader>gwn"] = { function() Snacks.picker.worktrees_new() end, desc = "New worktree" },
+        ["<leader>gwr"] = { function() Snacks.picker.worktrees_remove() end, desc = "Remove worktree" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus

@@ -62,18 +62,18 @@ return {
         local opts = vim.lsp.config[server]
         vim.lsp.enable(server)
       end,
-      intelephense = function()
-        vim.lsp.config.intelephense.setup {
-          settings = {
-            intelephense = {
-              files = {
-                maxSize = 1000000 * 50,
-                maxMemory = 4098,
-              },
-            },
-          },
-        }
-      end,
+      -- intelephense = function()
+      --   vim.lsp.config.intelephense.setup {
+      --     settings = {
+      --       intelephense = {
+      --         files = {
+      --           maxSize = 1000000 * 50,
+      --           maxMemory = 4098,
+      --         },
+      --       },
+      --     },
+      --   }
+      -- end,
     },
     -- Configure buffer local auto commands to add when attaching a language server
     autocmds = {
