@@ -28,6 +28,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.pack.svelte" },
+  { import = "astrocommunity.pack.helm" },
   -- { import = "astrocommunity.pack.java" }, -- add Java language support
   -- { import = "astrocommunity.lsp.nvim-java" }, -- opt-in to nvim-java for LSP
   -- { import = "astrocommunity.completion.copilot-vim-cmp" },
